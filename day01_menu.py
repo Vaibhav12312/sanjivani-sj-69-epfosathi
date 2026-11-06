@@ -40,11 +40,10 @@ while True:
 
         salary = float(input("Enter your monthly basic salary + DA: "))
 
-        if salary <= 15000:
-            print("You meet the basic wage threshold for mandatory EPF membership.")
-        elif salary > 15000:
-            print("Your salary is above the basic wage threshold.")
-            print("Membership may depend on your existing membership status and applicable EPF rules.")
+        if salary <= 0:
+            print("Please enter a valid salary greater than zero.")
+        elif salary <= 15000:
+            print("You meet the basic wage threshold, subject to applicable EPF rules.")
 
     # Option 0: Exit
     elif choice == "0":
